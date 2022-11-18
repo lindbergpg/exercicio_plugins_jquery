@@ -34,27 +34,27 @@
             <h2>Cadastrar</h2>
                 <div>
                     <label for="nome">Nome completo</label>
-                    <input type="text" name="nome" id="nome" required>
+                    <input type="text" name="nome" id="nome">
                 </div>
                 <div>
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email">
                 </div>
                 <div>
                     <label for="telefone">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" required>
+                    <input type="tel" name="telefone" id="telefone">
                 </div>
                 <div>
                     <label for="cpf">CPF</label>
-                    <input type="text" name="cpf" id="cpf" required>
+                    <input type="text" name="cpf" id="cpf">
                 </div>
                 <div>
                     <label for="endereco">Endereço completo</label>
-                    <input type="text" name="endereco" id="endereco" required>
+                    <input type="text" name="endereco" id="endereco">
                 </div>
                 <div>
                     <label for="cep">CEP</label>
-                    <input type="text" name="cep" id="cep" required>
+                    <input type="text" name="cep" id="cep">
                 </div>
             <button type="submit">Enviar</button>
         </form>
@@ -62,16 +62,47 @@
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
 
     <script>
         $(document).ready(function() {
-            $('#telefone').mask('(00) 00000-0000')
+            $('#telefone').mask('(00) 00000-0000', {
+                placeholder: '(00) 12345-4321'
+            })
         })
         $(document).ready(function() {
-            $('#cpf').mask('000.000.000-00')
+            $('#cpf').mask('000.000.000-00', {
+                placeholder: '111.222.333-44'
+            })
         })
         $(document).ready(function() {
-            $('#cep').mask('00.000-000')
+            $('#cep').mask('00.000-000', {
+                placeholder: '11.222-333'
+            })
+        
+        $('form').validate({
+            roles: {
+                nome: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                telefone: {
+                    required: true
+                },
+                cpf: {
+                    required: true
+                },
+                endereco: {
+                    required: true
+                },
+                cep: {
+                    required: true
+                },
+            }
+        })
         })
 
     </script>
