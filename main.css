@@ -11,21 +11,38 @@ body {
 
 header {
     color: #fff;
-    padding: 20px 0;
+    padding: 15px 0;
     background-color: rgba(255,255,255,0.07);
+}
+
+header li {
+    display: inline;
+    padding-left: 8px;
+}
+
+header li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header h1 {
+    font-weight: normal;
 }
 
 .container {
     padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .formulario {
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 320px;
+    margin: 30px auto;
     background-color: rgba(255,255,255,0.13);
-    padding: 20px 50px;
+    padding: 20px 35px;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.172);
+    border: 1px solid #fff;
 }
 
 form h2 {
@@ -41,8 +58,8 @@ form label {
 }
 
 form input {
-    padding: 8px;
-    width: 300px;
+    padding: 6px;
+    width: 250px;
     margin-bottom: 8px;
     margin-top: 2px;
     border: none;
@@ -58,13 +75,14 @@ form input {
 form button {
     background-color: #fff;
     color: #080710;
-    padding: 8px;
-    width: 300px;
+    padding: 6px;
+    width: 250px;
     margin: 18px 0;
     border: none;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 form button:hover {

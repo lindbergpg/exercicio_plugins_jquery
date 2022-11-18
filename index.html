@@ -14,25 +14,67 @@
     <header>
         <div class="container">
             <h1>Exercício plugins jquery</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#">Eventos</a>
+                    </li>
+                    <li>
+                        <a href="#">Cadastrar</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <div class="formulario">
         <form>
             <h2>Cadastrar</h2>
-            <label for="nome">Nome completo</label>
-            <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="E-mail" required>
-            <label for="telefone">Telefone</label>
-            <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required>
-            <label for="cpf">CPF</label>
-            <input type="number" name="cpf" id="cpf" placeholder="CPF" required>
-            <label for="endereco">Endereço completo</label>
-            <input type="text" name="endereco" id="endereco" placeholder="Endereço completo" required>
-            <label for="cep">CEP</label>
-            <input type="number" name="cep" id="cep" placeholder="CEP" required>
+                <div>
+                    <label for="nome">Nome completo</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" required>
+                </div>
+                <div>
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" id="cpf" required>
+                </div>
+                <div>
+                    <label for="endereco">Endereço completo</label>
+                    <input type="text" name="endereco" id="endereco" required>
+                </div>
+                <div>
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" required>
+                </div>
             <button type="submit">Enviar</button>
         </form>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#telefone').mask('(00) 00000-0000')
+        })
+        $(document).ready(function() {
+            $('#cpf').mask('000.000.000-00')
+        })
+        $(document).ready(function() {
+            $('#cep').mask('00.000-000')
+        })
+
+    </script>
+
 </body>
 </html>
